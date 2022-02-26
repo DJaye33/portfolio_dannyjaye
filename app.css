@@ -61,6 +61,7 @@ nav {
   max-width: 30.5rem;
   padding: 1.6rem 3.2rem;
   background-color: #000;
+  height: 100vh;
 }
 
 nav h1 {
@@ -102,7 +103,7 @@ nav ul li a {
   position: relative;
 }
 
-nav ul li a.active:before {
+nav ul li a.active::before {
   background-color: #ff304e;
 }
 
@@ -114,8 +115,117 @@ nav ul li a::before {
   bottom: -0.3rem;
   left: 0;
   background-color: #fff;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover::before {
+  visibility: visible;
+  width: 100%;
 }
 
 nav ul li:last-of-type {
   margin-bottom: 0;
+}
+
+/* Main */
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex: 1;
+}
+
+main section {
+  display: flex;
+  height: 100%;
+  max-width: 90rem;
+  margin: auto;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding: 3.2rem 0;
+}
+
+main section h2 {
+  color: #000;
+  font-size: 4.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 3.2rem;
+}
+
+main section p {
+  color: #383838;
+  margin-bottom: 1.6rem;
+}
+
+main section:not(.home) {
+  display: none;
+}
+
+main section img {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  animation: morph 8s ease-in-out infinite 1s;
+  background-blend-mode: multiply;
+  border: 1rem solid #ff304e;
+  max-width: 90%;
+  height: auto;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+}
+
+/* Main : Home */
+main section.home {
+  flex-direction: row;
+  align-items: center;
+}
+
+main section.home .avatar {
+  width: 100%;
+  margin-right: 6.4rem;
+}
+
+/* main section.home .avatar img {
+  width: 48rem;
+} */
+
+main section.home .content ul {
+  display: flex;
+}
+
+main section.home .content li {
+  margin-right: 2.4rem;
+}
+
+main section.home .content li:last-of-type {
+  margin-right: 0;
+}
+
+main section.home .content ul li svg {
+  width: 2rem;
+  height: 2rem;
+  transition: fill 0.4s ease;
+}
+
+main section.home .content ul li svg:hover {
+  fill: #ff304e;
+}
+
+maini section.home .content p {
+  margin-bottom: 3.2rem;
+}
+
+/* Animations */
+@keyframes morph {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
 }
