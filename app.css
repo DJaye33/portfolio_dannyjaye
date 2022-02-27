@@ -221,6 +221,25 @@ maini section.home .content p {
   margin-bottom: 3.2rem;
 }
 
+/* Main: About */
+.large-image img {
+  width: 68.3rem;
+}
+
+main section.about .large-image {
+  margin-bottom: 6.4rem;
+  display: flex;
+  justify-content: center;
+}
+
+main section.about h2 {
+  font-size: 4rem;
+}
+
+main section.about p:last-of-type {
+  margin-bottom: 0;
+}
+
 /* Animations */
 @keyframes morph {
   0% {
