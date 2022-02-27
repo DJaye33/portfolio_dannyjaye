@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,900;1,400;1,900&display=swap");
 
 * {
   margin: 0;
@@ -19,7 +19,7 @@ html {
 /* Global App */
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #fff;
   font-smooth: always;
   -webkit-font-smoothing: antialiased;
@@ -152,12 +152,12 @@ main section h2 {
   font-size: 4.8rem;
   font-weight: 900;
   text-transform: uppercase;
-  margin-bottom: 3.2rem;
+  margin-bottom: 2rem;
 }
 
 main section p {
   color: #383838;
-  margin-bottom: 1.6rem;
+  margin-bottom: 2rem;
 }
 
 main section:not(.home) {
@@ -191,6 +191,10 @@ main section.home .avatar {
   width: 48rem;
 } */
 
+main section.home .content strong {
+  color: #ff304e;
+}
+
 main section.home .content ul {
   display: flex;
 }
@@ -204,8 +208,8 @@ main section.home .content li:last-of-type {
 }
 
 main section.home .content ul li svg {
-  width: 2rem;
-  height: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
   transition: fill 0.4s ease;
 }
 
